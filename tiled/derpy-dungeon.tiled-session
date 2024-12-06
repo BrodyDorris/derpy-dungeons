@@ -3,20 +3,21 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "level-01.tmx",
     "expandedProjectPaths": [
         "."
     ],
     "fileStates": {
         "": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 3
         },
         "level-01.tmx": {
-            "scale": 1.7416666666666665,
-            "selectedLayer": 1,
+            "scale": 1.5,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 240.86124401913878,
-                "y": 240.57416267942585
+                "x": 188,
+                "y": 230
             }
         },
         "level-01.tmx#floors": {
