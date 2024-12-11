@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 import { SCENES, IMAGES } from "../constants";
 import { Player } from "../game-objects/player";
+import { debugCollisions } from "../utility";
 
 export class Level01 extends Phaser.Scene {
     constructor() {
@@ -24,10 +25,15 @@ export class Level01 extends Phaser.Scene {
         const wallTiles = map.addTilesetImage( "low-walls",IMAGES.walls);
         const wallLayer = map.createLayer("wall", wallTiles);
 
+        wallLayer.setCollisionByProperty({collides: true});
+        debugCollisions(this, wallLayer);
+
         const decorTiles = map.addTilesetImage( "high-walls",IMAGES.decor);
         const decorLayer = map.createLayer("decor", decorTiles);
 
         this.player = new Player(this, 50, 450);
+
+        this.physics.add.collider(this.player, wallLayer);
 
         //this.cameras.main.setOrigin(50,50);
         this.cameras.main.zoom = 10;

@@ -611,11 +611,6 @@
                         }]
                 }, 
                 {
-                 "animation":[
-                        {
-                         "duration":100,
-                         "tileid":19
-                        }],
                  "id":47,
                  "properties":[
                         {
@@ -711,39 +706,6 @@
          "spacing":0,
          "tilecount":192,
          "tileheight":16,
-         "tiles":[
-                {
-                 "animation":[
-                        {
-                         "duration":100,
-                         "tileid":36
-                        }, 
-                        {
-                         "duration":100,
-                         "tileid":37
-                        }, 
-                        {
-                         "duration":100,
-                         "tileid":38
-                        }],
-                 "id":38
-                }, 
-                {
-                 "animation":[
-                        {
-                         "duration":100,
-                         "tileid":134
-                        }, 
-                        {
-                         "duration":100,
-                         "tileid":132
-                        }, 
-                        {
-                         "duration":100,
-                         "tileid":133
-                        }],
-                 "id":191
-                }],
          "tilewidth":16
         }],
  "tilewidth":16,

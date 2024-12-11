@@ -10,7 +10,7 @@
     "fileStates": {
         "": {
             "scaleInDock": 1,
-            "scaleInEditor": 3
+            "scaleInEditor": 4
         },
         "level-01.tmx": {
             "scale": 1.5,
@@ -44,6 +44,7 @@
         "level-01.tmx"
     ],
     "project": "derpy-dungeon.tiled-project",
+    "property.type": "bool",
     "recentFiles": [
         "level-01.tmx"
     ],
