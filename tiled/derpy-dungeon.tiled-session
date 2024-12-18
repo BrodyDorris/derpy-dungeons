@@ -20,21 +20,36 @@
                 "y": 230
             }
         },
+        "level-01.tmx#Monsters": {
+            "dynamicWrapping": true
+        },
+        "level-01.tmx#creatures": {
+            "dynamicWrapping": true
+        },
         "level-01.tmx#floors": {
+            "dynamicWrapping": false,
             "scaleInDock": 3,
             "scaleInEditor": 5.5
         },
         "level-01.tmx#high-walls": {
+            "dynamicWrapping": false,
             "scaleInDock": 1,
             "scaleInEditor": 3
         },
+        "level-01.tmx#interactables": {
+            "dynamicWrapping": true
+        },
+        "level-01.tmx#items": {
+            "dynamicWrapping": true
+        },
         "level-01.tmx#low-walls": {
+            "dynamicWrapping": false,
             "scaleInDock": 2,
             "scaleInEditor": 4
         }
     },
     "last.exportedFilePath": "/home/dorrisbj/derpy-dungeons/public/tilemaps",
-    "last.imagePath": "/home/dorrisbj/derpy-dungeons/public/tilemaps",
+    "last.imagePath": "/home/dorrisbj/derpy-dungeons/tiled",
     "map.height": 30,
     "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
     "map.lastUsedFormat": "tmx",
@@ -52,5 +67,6 @@
     "tileset.tileSize": {
         "height": 16,
         "width": 16
-    }
+    },
+    "tileset.type": 1
 }

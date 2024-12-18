@@ -14,3 +14,36 @@ export const IMAGES = {
 };
 
 export const DEBUG = false;
+
+export const ANIMS = {
+    player: {
+        idle: "player-idle",
+        run: "player-run",
+        hit: "player-hit",    
+    },
+};
+
+export const MONSTERS = {
+	angel: "angel",
+	bigDemon: "big_demon",
+	bigZombie: "big_zombie",
+	chort: "chort",
+	plagueDoctor: "doc",
+	goblin: "goblin",
+	iceZombie: "ice_zombie",
+	imp: "imp",
+	maskedOrc: "masked_orc",
+	muddy: "muddy",
+	necromancer: "necromancer",
+	ogre: "ogre",
+	orcShaman: "orc_shaman",
+	orcWarrior: "orc_warrior",
+	pumpkinDude: "pumpkin_dude",
+	skeleton: "skeleton",
+	slug: "slug",
+	swampy: "swampy",
+	tinySlug: "tiny_slug",
+	tinyZombie: "tiny_zombie",
+	wogol: "wogol",
+	zombie: "zombie",
+};

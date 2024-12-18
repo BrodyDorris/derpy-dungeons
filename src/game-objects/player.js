@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-import {IMAGES} from "../constants";
+import {ANIMS, IMAGES} from "../constants";
 
 export class Player extends Phaser.Physics.Arcade.Sprite {
     constructor(scene, x, y) {
@@ -15,6 +15,8 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
         //adjust hit box
         this.setSize(this.width * 0.25, this.height * 0.25);
         this.setOffset(this.width / 2 - 2, 20);
+
+        this.anims.play(ANIMS.player.idle);
     }
 
     create() {}
@@ -22,8 +24,10 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
     update() {
         if(this.keys.left.isDown) {
             this.setVelocityX(-this.speed);
+            this.flipX = true;
         }else if(this.keys.right.isDown) {
             this.setVelocityX(this.speed);
+            this.flipX = false;
         }else {
             this.setVelocityX(0);
         }
@@ -34,6 +38,12 @@ export class Player extends Phaser.Physics.Arcade.Sprite {
             this.setVelocityY(this.speed);
         }else {
             this.setVelocityY(0);
+        }
+
+        if(this.body.velocity.equals(Phaser.Math.Vector2.ZERO)) {
+            this.anims.play(ANIMS.player.idle, true);
+        }else{
+            this.anims.play(ANIMS.player.run, true);
         }
     }
 }

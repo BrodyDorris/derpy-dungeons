@@ -2,6 +2,7 @@ import Phaser from "phaser";
 import { SCENES, IMAGES } from "../constants";
 import { Player } from "../game-objects/player";
 import { debugCollisions } from "../utility";
+import { Skeleton } from "../game-objects/monsters/skeleton";
 
 export class Level01 extends Phaser.Scene {
     constructor() {
@@ -19,17 +20,28 @@ export class Level01 extends Phaser.Scene {
             tileHeight: 16,
         });
 
-        const floorTiles = map.addTilesetImage( "floors",IMAGES.floor);
-        const floorLayer = map.createLayer("floor", floorTiles);
+        const floorLayer = map.createLayer(map.addTilesetImage( "floors",IMAGES.floor));
 
-        const wallTiles = map.addTilesetImage( "low-walls",IMAGES.walls);
-        const wallLayer = map.createLayer("wall", wallTiles);
+        const wallLayer = map.createLayer(map.addTilesetImage( "low-walls",IMAGES.walls));
 
         wallLayer.setCollisionByProperty({collides: true});
         debugCollisions(this, wallLayer);
 
-        const decorTiles = map.addTilesetImage( "high-walls",IMAGES.decor);
-        const decorLayer = map.createLayer("decor", decorTiles);
+        this.monsters = this.add.group();
+
+        let monsterObjects = map.createFromObjects("spawns", [
+            {
+            name: skeleton,
+            key:IMAGES.sprites,
+            classType: Skeleton
+            }
+        ]);
+
+        for (let mo of monsterObjects) {
+            this.monsters.add.apply(mo);
+        }
+
+        const decorLayer = map.createLayer(map.addTilesetImage( "high-walls",IMAGES.decor));
 
         this.player = new Player(this, 50, 450);
 
